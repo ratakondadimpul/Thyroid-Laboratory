@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--base);
+  --color-foreground: var(--ink);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--ink);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--surface);
+  --color-muted: var(--line);
+  --color-muted-foreground: var(--ink-2);
+  --color-border: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--surface);
+  --color-destructive: var(--accent);
+  --font-sans: var(--font-text);
+  --font-mono: var(--font-text);
+  --font-display: var(--font-display);
+  --radius: 0px;
+}
+
+/* ===== TECHNICAL BROADSHEET — Token Block ===== */
+:root {
+  /* TYPE — 1.333 perfect fourth, big jumps */
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-text: "IBM Plex Mono", ui-monospace, monospace;
+  --step--1: 0.833rem; --step-0: 1rem; --step-1: 1.333rem;
+  --step-2: 1.777rem; --step-3: 2.369rem; --step-4: 3.157rem;
+  --step-5: 4.209rem; --step-6: 5.61rem;
+
+  /* SPACE — 4px base, multiples only */
+  --space-3xs: 0.25rem; --space-2xs: 0.5rem; --space-xs: 0.75rem;
+  --space-s: 1rem; --space-m: 1.5rem; --space-l: 2rem;
+  --space-xl: 3rem; --space-2xl: 4.5rem; --space-3xl: 7rem;
+
+  /* COLOR — warm newsprint, near-black, one signal */
+  --base: #f4f1ea;
+  --surface: #ffffff;
+  --surface-2: #fdfcfa;
+  --ink: #12100e;
+  --ink-2: #55504a;
+  --ink-3: #8b857c;
+  --line: #ddd7cc;
+  --line-strong: #c2b8a3;
+  --accent: #c1362f;
+  --accent-soft: #fdf0ef;
+  --accent-ink: #ffffff;
+  --risk-low: #1a7a4c;
+  --risk-med: #8a6a00;
+  --risk-high: var(--accent);
+
+  /* FORM */
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-pill: 0px;
+  --border: 1px solid var(--line);
+  --shadow: none;
+  --shadow-soft: none;
+  --shadow-lift: none;
+
+  /* MOTION — almost none */
+  --dur-fast: 80ms; --dur: 150ms; --dur-slow: 220ms;
+  --ease: linear;
+  --ease-out: linear;
+}
+
+* { border-color: var(--line); }
+html { scrollbar-gutter: stable; }
+body {
+  background: var(--base);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--step--1);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-text); }
+.font-text { font-family: var(--font-text); }
+
+/* Broadsheet rules */
+.rule { border-top: var(--border); }
+.rule-strong { border-top: 2px solid var(--ink); }
+.rule-accent { border-top: 3px solid var(--accent); }
+.hairline { height: 1px; background: var(--line); }
+
+/* Utilities for broadsheet */
+.tabular { font-variant-numeric: tabular-nums; }
+.stencil { font-family: var(--font-text); font-weight: 700; letter-spacing: -0.03em; line-height: 0.9; }
+.mono-tabular { font-variant-numeric: tabular-nums; }
+.card { background: var(--surface); border: var(--border); border-radius: 0; box-shadow: none; }
+.card-hover { transition: none; }
+.card-hover:hover { border-color: var(--ink); }
+.scrollbar-thin { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+.scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: var(--line-strong); }
+
+@keyframes fade-up { from{opacity:0} to{opacity:1} }
+.animate-fade-up { animation: fade-up var(--dur) linear both; }
+
+/* Focus — restyled, never suppressed */
+*:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Table — hairline, tabular, sticky */
+.table-broadsheet { border-collapse: collapse; width: 100%; }
+.table-broadsheet th { font-family: var(--font-text); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); border-bottom: 1px solid var(--ink); padding: 8px 10px; text-align: left; font-weight: 700; }
+.table-broadsheet td { font-family: var(--font-text); font-size: 12px; border-bottom: 1px solid var(--line); padding: 8px 10px; }
+.table-broadsheet tr:last-child td { border-bottom: none; }
+.table-sticky thead th { position: sticky; top: 0; background: var(--surface); z-index: 1; }
+
+/* Hanging marginalia */
+.hang { margin-left: -1.5rem; padding-left: 1.5rem; border-left: 3px solid var(--accent); }
+@media (max-width: 1024px) { .hang { margin-left: 0; border-left: none; padding-left: 0; } }
+
+/* Type scale enforcement */
+h1 { font-family: var(--font-display); font-size: var(--step-4); line-height: 0.9; letter-spacing: -0.02em; }
+h2 { font-family: var(--font-display); font-size: var(--step-2); line-height: 1; }
+h3 { font-family: var(--font-text); font-size: var(--step-0); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

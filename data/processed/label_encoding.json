@@ -1,0 +1,29 @@
+{
+  "categories": [
+    "I131_treatment_effect",
+    "antithyroid_drugs",
+    "concurrent_non_thyroidal_illness",
+    "decreased_binding_protein",
+    "discordant_results",
+    "elevated_TBG",
+    "hyperthyroid",
+    "hypothyroid",
+    "increased_binding_protein",
+    "negative",
+    "overreplaced",
+    "replacement_therapy",
+    "surgery_effect",
+    "underreplaced"
+  ],
+  "overall": [
+    "Positive",
+    "Negative"
+  ],
+  "total": 9172,
+  "positive": 887,
+  "negative": 8285,
+  "by_category": {
+    "hypothyroid": 659,
+    "hyperthyroid": 228
+  }
+}

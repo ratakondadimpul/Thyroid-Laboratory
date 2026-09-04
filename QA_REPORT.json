@@ -1,0 +1,1292 @@
+[
+  {
+    "id": "ENV-01",
+    "severity": "HIGH",
+    "component": "Environment",
+    "name": "Health endpoint",
+    "passed": true,
+    "detail": "{'status': 'ok', 'service': 'thyroid-lab', 'models_exist': True}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ENV-02",
+    "severity": "HIGH",
+    "component": "ML",
+    "name": "Model performance loads",
+    "passed": true,
+    "detail": "{'best_model': 'XGBoost', 'models': [{'model': 'LogisticRegression', 'accuracy': 0.9422343324250682, 'precision': 0.6437246963562753, 'recall': 0.8983050847457628, 'f1': 0.75, 'auc': 0.962331241097776",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ENV-03",
+    "severity": "CRITICAL",
+    "component": "ML",
+    "name": "Model file exists",
+    "passed": true,
+    "detail": "thyroid_model.pkl exists",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ENV-04",
+    "severity": "CRITICAL",
+    "component": "Auth",
+    "name": "Login works",
+    "passed": true,
+    "detail": "token len 137",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ENV-05",
+    "severity": "HIGH",
+    "component": "Frontend",
+    "name": "Build succeeds",
+    "passed": true,
+    "detail": "build ok",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-01",
+    "severity": "CRITICAL",
+    "component": "Auth",
+    "name": "Valid login",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-02",
+    "severity": "HIGH",
+    "component": "Auth",
+    "name": "Invalid username rejected",
+    "passed": true,
+    "detail": "401 {\"detail\":\"Invalid credentials\"}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-03",
+    "severity": "HIGH",
+    "component": "Auth",
+    "name": "Invalid password rejected",
+    "passed": true,
+    "detail": "401",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-04",
+    "severity": "MEDIUM",
+    "component": "Auth",
+    "name": "Empty username handled",
+    "passed": true,
+    "detail": "401",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-05",
+    "severity": "MEDIUM",
+    "component": "Auth",
+    "name": "Empty password handled",
+    "passed": true,
+    "detail": "401",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-06",
+    "severity": "MEDIUM",
+    "component": "Auth",
+    "name": "Both empty",
+    "passed": true,
+    "detail": "401",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-12",
+    "severity": "HIGH",
+    "component": "Auth",
+    "name": "Direct API without auth rejected",
+    "passed": true,
+    "detail": "401",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-09",
+    "severity": "HIGH",
+    "component": "Auth",
+    "name": "Session persists",
+    "passed": true,
+    "detail": "{'email': 'admin@lab.local', 'role': 'admin'}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-11",
+    "severity": "HIGH",
+    "component": "Auth",
+    "name": "Dashboard protected without login",
+    "passed": true,
+    "detail": "status 401 (expected 401 if protected, got 401)",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-11b",
+    "severity": "HIGH",
+    "component": "Auth",
+    "name": "Upload protected without login",
+    "passed": true,
+    "detail": "status 401 expected 401",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-16",
+    "severity": "MEDIUM",
+    "component": "Auth",
+    "name": "Multiple attempts then valid",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-18",
+    "severity": "CRITICAL",
+    "component": "Security",
+    "name": "Password hashed",
+    "passed": true,
+    "detail": "hash prefix $2b$",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "AUTH-19",
+    "severity": "MEDIUM",
+    "component": "Security",
+    "name": "Token storage check",
+    "passed": true,
+    "detail": "Uses localStorage (XSS risk vs httpOnly)",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DASH-01",
+    "severity": "HIGH",
+    "component": "Dashboard",
+    "name": "Loads and counts consistent",
+    "passed": true,
+    "detail": "total 120144 pos 17670 neg 102474 calc True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-01",
+    "severity": "HIGH",
+    "component": "Upload",
+    "name": "Valid CSV accepted",
+    "passed": true,
+    "detail": "200 {'batch_id': '584390dc', 'validation': {'invalid_age': 0, 'invalid_TSH': 0, 'invalid_T3': 0, 'invalid_TT4': 0, 'invalid_T4U': 0, 'invalid_FTI': 0, 'empty_columns': ['TBG'], 'duplicate_records': 0, 'total_rows': 2, 'total_cols': 30, 'missing_values': 2, 'invalid_records': 0, 'valid_records': 2, 'outliers': 0}, 'filename': 'valid.csv', 'dataset_name': 'valid.csv'}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-02",
+    "severity": "HIGH",
+    "component": "Upload",
+    "name": "XLSX accepted",
+    "passed": true,
+    "detail": "200 {\"batch_id\":\"31ceb5a1\",\"validation\":{\"invalid_age\":0,\"invalid_TSH\":0,\"invalid_T3\":0,\"invalid_TT4\":0,\"invalid_T4U\":0,\"invalid_FTI\":0,\"empty_columns\":[\"TBG\"],\"duplicate_records\":0,\"total_rows\":1,\"total_cols\":30,\"missing_values\":1,\"invalid_records\":0,\"valid_records\":1,\"outliers\":0},\"filename\":\"test.xls",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-03",
+    "severity": "MEDIUM",
+    "component": "Upload",
+    "name": "Empty file rejected",
+    "passed": true,
+    "detail": "400",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-04",
+    "severity": "MEDIUM",
+    "component": "Upload",
+    "name": "Header-only rejected",
+    "passed": true,
+    "detail": "400 {\"detail\":\"Empty dataset\"}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-05",
+    "severity": "MEDIUM",
+    "component": "Upload",
+    "name": "TXT rejected",
+    "passed": true,
+    "detail": "400",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-06",
+    "severity": "MEDIUM",
+    "component": "Upload",
+    "name": "JSON rejected",
+    "passed": true,
+    "detail": "400",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-07",
+    "severity": "MEDIUM",
+    "component": "Upload",
+    "name": "PDF rejected",
+    "passed": true,
+    "detail": "400",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-08",
+    "severity": "MEDIUM",
+    "component": "Upload",
+    "name": "Large file limit exists",
+    "passed": true,
+    "detail": "code checks len(content)>20MB",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-09",
+    "severity": "MEDIUM",
+    "component": "Upload",
+    "name": "Corrupted CSV handled",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-10",
+    "severity": "HIGH",
+    "component": "Validation",
+    "name": "Duplicate detection",
+    "passed": true,
+    "detail": "dup 1",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "UP-10b",
+    "severity": "HIGH",
+    "component": "Preprocessing",
+    "name": "Dedup in analyze",
+    "passed": true,
+    "detail": "total 1 expected 1",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "VAL-01",
+    "severity": "MEDIUM",
+    "component": "Validation",
+    "name": "Invalid Age detected",
+    "passed": true,
+    "detail": "invalid_age 3",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "VAL-02",
+    "severity": "LOW",
+    "component": "Validation",
+    "name": "Negative lab handled",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "VAL-02b",
+    "severity": "LOW",
+    "component": "ML",
+    "name": "Negative lab prediction not crash",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "VAL-03",
+    "severity": "MEDIUM",
+    "component": "Validation",
+    "name": "Missing TSH counted",
+    "passed": true,
+    "detail": "missing 2",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "VAL-03b",
+    "severity": "HIGH",
+    "component": "Preprocessing",
+    "name": "Missing TSH imputed",
+    "passed": true,
+    "detail": "analyze 200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PRE-01",
+    "severity": "CRITICAL",
+    "component": "Preprocessing",
+    "name": "Feature order matches training",
+    "passed": true,
+    "detail": "cols ['age', 'sex', 'TSH', 'T3', 'TT4'] expected ['age', 'sex', 'TSH', 'T3', 'TT4']",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PRE-02",
+    "severity": "HIGH",
+    "component": "Preprocessing",
+    "name": "Missing handling no NaN",
+    "passed": true,
+    "detail": "has_nan False",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PRE-03",
+    "severity": "HIGH",
+    "component": "Preprocessing",
+    "name": "Scaler has 23 features",
+    "passed": true,
+    "detail": "n_features 23",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ML-01",
+    "severity": "CRITICAL",
+    "component": "ML",
+    "name": "Model loads",
+    "passed": true,
+    "detail": "model XGBClassifier scaler StandardScaler",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ML-02-1",
+    "severity": "HIGH",
+    "component": "ML",
+    "name": "Batch 1 prediction valid",
+    "passed": true,
+    "detail": "len 1 score range ok True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ML-02-10",
+    "severity": "HIGH",
+    "component": "ML",
+    "name": "Batch 10 prediction valid",
+    "passed": true,
+    "detail": "len 10 score range ok True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ML-02-100",
+    "severity": "HIGH",
+    "component": "ML",
+    "name": "Batch 100 prediction valid",
+    "passed": true,
+    "detail": "len 100 score range ok True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ML-02-500",
+    "severity": "HIGH",
+    "component": "ML",
+    "name": "Batch 500 prediction valid",
+    "passed": true,
+    "detail": "len 500 score range ok True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ML-03",
+    "severity": "MEDIUM",
+    "component": "ML",
+    "name": "Deterministic predictions",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "ML-04",
+    "severity": "HIGH",
+    "component": "ML",
+    "name": "Handles missing optional fields",
+    "passed": true,
+    "detail": "pred {'overall': 'Negative', 'category': 'negative', 'risk': 'Lower Risk', 'score': 21.8, 'proba': 0.21812501549720764, 'confidence': 0.78, 'cat_pred': 0}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "CAT-01",
+    "severity": "HIGH",
+    "component": "Category",
+    "name": "Training categories vs app",
+    "passed": true,
+    "detail": "training cats {'negative': 6771, 'elevated_TBG': 85, 'hypothyroid': 659, 'hyperthyroid': 228, 'discordant_results': 197, 'increased_binding_protein': 358, 'underreplaced': 129, 'overreplaced': 110, 'concurrent_non_thyroidal_illness': 455, 'replacement_therapy': 116, 'surgery_effect': 14, 'decreased_binding_protein': 30, 'antithyroid_drugs': 15, 'I131_treatment_effect': 5} app shows hypo/hyper",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "CAT-02",
+    "severity": "HIGH",
+    "component": "Category",
+    "name": "Category file exists if predicted",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "RISK-01",
+    "severity": "HIGH",
+    "component": "Risk",
+    "name": "High+Low == Negative",
+    "passed": true,
+    "detail": "neg 1 high 0 low 1",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "RISK-02",
+    "severity": "MEDIUM",
+    "component": "Risk",
+    "name": "Wording correct",
+    "passed": true,
+    "detail": "has_correct True has_banned False",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEG-01",
+    "severity": "HIGH",
+    "component": "Segregation",
+    "name": "Total==Pos+Neg",
+    "passed": true,
+    "detail": "total 3 pos 1 neg 2",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEG-02",
+    "severity": "HIGH",
+    "component": "Segregation",
+    "name": "Neg==High+Low",
+    "passed": true,
+    "detail": "neg 2 high 0 low 2",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEG-03",
+    "severity": "MEDIUM",
+    "component": "Segregation",
+    "name": "Hypo+Hyper <= Pos",
+    "passed": true,
+    "detail": "hypo 1 hyper 0 pos 1",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEG-04",
+    "severity": "HIGH",
+    "component": "Segregation",
+    "name": "No duplicate Patient_IDs",
+    "passed": true,
+    "detail": "ids 3 unique True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-complete",
+    "severity": "HIGH",
+    "component": "Download",
+    "name": "complete download valid",
+    "passed": true,
+    "detail": "status 200 len 590",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-complete-idem",
+    "severity": "LOW",
+    "component": "Download",
+    "name": "Idempotent check",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-positive",
+    "severity": "HIGH",
+    "component": "Download",
+    "name": "positive download valid",
+    "passed": true,
+    "detail": "status 200 len 474",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-positive-idem",
+    "severity": "LOW",
+    "component": "Download",
+    "name": "Idempotent check",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-negative",
+    "severity": "HIGH",
+    "component": "Download",
+    "name": "negative download valid",
+    "passed": true,
+    "detail": "status 200 len 482",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-negative-idem",
+    "severity": "LOW",
+    "component": "Download",
+    "name": "Idempotent check",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-higher_risk",
+    "severity": "HIGH",
+    "component": "Download",
+    "name": "higher_risk download valid",
+    "passed": true,
+    "detail": "status 200 len 366",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-higher_risk-idem",
+    "severity": "LOW",
+    "component": "Download",
+    "name": "Idempotent check",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-lower_risk",
+    "severity": "HIGH",
+    "component": "Download",
+    "name": "lower_risk download valid",
+    "passed": true,
+    "detail": "status 200 len 482",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-lower_risk-idem",
+    "severity": "LOW",
+    "component": "Download",
+    "name": "Idempotent check",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-hypothyroid",
+    "severity": "HIGH",
+    "component": "Download",
+    "name": "hypothyroid download valid",
+    "passed": true,
+    "detail": "status 200 len 474",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-hypothyroid-idem",
+    "severity": "LOW",
+    "component": "Download",
+    "name": "Idempotent check",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-hyperthyroid",
+    "severity": "HIGH",
+    "component": "Download",
+    "name": "hyperthyroid download valid",
+    "passed": true,
+    "detail": "status 200 len 366",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DL-hyperthyroid-idem",
+    "severity": "LOW",
+    "component": "Download",
+    "name": "Idempotent check",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "REP-01",
+    "severity": "HIGH",
+    "component": "Report",
+    "name": "PDF generation",
+    "passed": true,
+    "detail": "status 200 len 27474 type application/pdf",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "REP-02",
+    "severity": "MEDIUM",
+    "component": "Report",
+    "name": "PDF header valid",
+    "passed": true,
+    "detail": "b'%PDF'",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "REP-03",
+    "severity": "MEDIUM",
+    "component": "Report",
+    "name": "Small dataset PDF",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "HIST-01",
+    "severity": "HIGH",
+    "component": "History",
+    "name": "History loads",
+    "passed": true,
+    "detail": "total 253",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "HIST-02-acbc",
+    "severity": "HIGH",
+    "component": "History",
+    "name": "Counts match analytics",
+    "passed": true,
+    "detail": "history pos 0 analytics 0",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "HIST-03-acbc",
+    "severity": "MEDIUM",
+    "component": "History",
+    "name": "Historical results stable",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "HIST-02-db4b",
+    "severity": "HIGH",
+    "component": "History",
+    "name": "Counts match analytics",
+    "passed": true,
+    "detail": "history pos 1 analytics 1",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "HIST-03-db4b",
+    "severity": "MEDIUM",
+    "component": "History",
+    "name": "Historical results stable",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEARCH-01",
+    "severity": "HIGH",
+    "component": "Search",
+    "name": "Exact match",
+    "passed": true,
+    "detail": "total 1",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEARCH-02",
+    "severity": "MEDIUM",
+    "component": "Search",
+    "name": "Partial match",
+    "passed": true,
+    "detail": "total 2",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEARCH-03",
+    "severity": "MEDIUM",
+    "component": "Search",
+    "name": "No match",
+    "passed": true,
+    "detail": "total 0",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEARCH-04",
+    "severity": "HIGH",
+    "component": "Filter",
+    "name": "Positive filter",
+    "passed": true,
+    "detail": "total 1",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEARCH-05",
+    "severity": "MEDIUM",
+    "component": "Filter",
+    "name": "Higher risk filter",
+    "passed": true,
+    "detail": "total 0",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "API-01",
+    "severity": "MEDIUM",
+    "component": "API",
+    "name": "Invalid batch 404",
+    "passed": true,
+    "detail": "404",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "API-02",
+    "severity": "MEDIUM",
+    "component": "API",
+    "name": "Invalid patient 404",
+    "passed": true,
+    "detail": "404",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "API-03",
+    "severity": "LOW",
+    "component": "API",
+    "name": "Wrong method 405",
+    "passed": true,
+    "detail": "405",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "API-04",
+    "severity": "HIGH",
+    "component": "API",
+    "name": "No stack trace leak",
+    "passed": true,
+    "detail": "has_trace False body {\"detail\":\"Empty dataset\"}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DB-01",
+    "severity": "HIGH",
+    "component": "DB",
+    "name": "Tables exist",
+    "passed": true,
+    "detail": "tables {'patients', 'datasets', 'predictions', 'users'}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "DB-02",
+    "severity": "MEDIUM",
+    "component": "DB",
+    "name": "Indexes exist",
+    "passed": true,
+    "detail": "[(0, 'ix_patients_patient_id', 0, 'c', 0), (1, 'ix_patients_dataset_id', 0, 'c', 0)]",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEC-01",
+    "severity": "CRITICAL",
+    "component": "Security",
+    "name": "SQL injection blocked",
+    "passed": true,
+    "detail": "404",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEC-02",
+    "severity": "HIGH",
+    "component": "Security",
+    "name": "XSS stored safely",
+    "passed": true,
+    "detail": "pid <script>alert(1)</script>",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEC-03",
+    "severity": "HIGH",
+    "component": "Security",
+    "name": "Path traversal blocked",
+    "passed": true,
+    "detail": "exists_outside False status 200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEC-04",
+    "severity": "HIGH",
+    "component": "Security",
+    "name": "Executable rejected",
+    "passed": true,
+    "detail": "400",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEC-05",
+    "severity": "LOW",
+    "component": "Security",
+    "name": "CORS check",
+    "passed": true,
+    "detail": "allow_origins * with credentials True is misconfig",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "SEC-06",
+    "severity": "MEDIUM",
+    "component": "Security",
+    "name": "Hardcoded secret",
+    "passed": true,
+    "detail": "hardcoded SECRET_KEY found",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PERF-01",
+    "severity": "MEDIUM",
+    "component": "Performance",
+    "name": "1000 rows up 0.03s analyze 0.38s",
+    "passed": true,
+    "detail": "up 0.03 analyze 0.38 total {'total': 1000, 'positive': 0, 'negative': 1000, 'higher_risk': 0, 'lower_risk': 1000, 'hypothyroid': 0, 'hyperthyroid': 0}",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PERF-02",
+    "severity": "MEDIUM",
+    "component": "Performance",
+    "name": "5000 rows total 1.35s",
+    "passed": true,
+    "detail": "dur 1.35",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "FAIL-01",
+    "severity": "HIGH",
+    "component": "Robustness",
+    "name": "Missing model fallback",
+    "passed": true,
+    "detail": "status 200 (should use fallback)",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PRIV-01",
+    "severity": "MEDIUM",
+    "component": "Privacy",
+    "name": "No PII required",
+    "passed": true,
+    "detail": "200",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PRIV-02",
+    "severity": "HIGH",
+    "component": "Privacy",
+    "name": "No password hash exposure",
+    "passed": true,
+    "detail": "has_hash False",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-01",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Command Center exists",
+    "passed": true,
+    "detail": "found True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-02",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Dataset Intake Center exists",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-03",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Live Pipeline stepper",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-04",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Smart Column Mapping",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-05",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Data Quality Center",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-06",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Analysis Workspace 10-section",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-overview",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab overview",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-population",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab population",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-positive",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab positive",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-negative",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab negative",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-risk",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab risk",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-categories",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab categories",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-laboratory",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab laboratory",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-patients",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab patients",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-insights",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab insights",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-07-quality",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Workspace tab quality",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-08",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Results Center centralized",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-09",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Batch Comparison",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-10",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Model Intelligence",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-11",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Report Center",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-12",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Administration + Audit",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-13",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "Command Palette Cmd+K",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-14",
+    "severity": "HIGH",
+    "component": "Premium UI",
+    "name": "Premium Login split",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-15",
+    "severity": "MEDIUM",
+    "component": "Design",
+    "name": "Premium tokens",
+    "passed": true,
+    "detail": "True accent/base found",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-16",
+    "severity": "MEDIUM",
+    "component": "Stack",
+    "name": "Next 16.3.2 + Recharts",
+    "passed": true,
+    "detail": "next 16.3.2",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-17",
+    "severity": "MEDIUM",
+    "component": "Stack",
+    "name": "Tailwind 4",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-18",
+    "severity": "HIGH",
+    "component": "Backend",
+    "name": "Endpoints count >=15",
+    "passed": true,
+    "detail": "count 16",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-19",
+    "severity": "MEDIUM",
+    "component": "Premium UI",
+    "name": "THY batch IDs",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "PREM-20",
+    "severity": "HIGH",
+    "component": "Medical Safety",
+    "name": "Defensible wording",
+    "passed": true,
+    "detail": "True",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "E2E-01",
+    "severity": "HIGH",
+    "component": "Consistency",
+    "name": "DB vs API",
+    "passed": true,
+    "detail": "db pos 1 api pos 1 db neg 2 api neg 2",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "E2E-02",
+    "severity": "HIGH",
+    "component": "Consistency",
+    "name": "CSV vs API",
+    "passed": true,
+    "detail": "csv total 3 api total 3",
+    "root_cause": "",
+    "fix": ""
+  },
+  {
+    "id": "E2E-03",
+    "severity": "MEDIUM",
+    "component": "Consistency",
+    "name": "Dashboard includes E2E",
+    "passed": true,
+    "detail": "dash total 126161",
+    "root_cause": "",
+    "fix": ""
+  }
+]
