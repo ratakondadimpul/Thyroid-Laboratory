@@ -83,3 +83,5 @@ cd backend && python -c "from app.main import app; print('ok')"
 curl http://localhost:8000/health
 cd frontend && npm run build  # must succeed
 ```
+
+<!-- Deployed: 2026-09-05T07:11:56Z -->
